@@ -1,0 +1,35 @@
+{
+  "name": "@outrive/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the OUTRIVE API",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["outrive", "virtuals", "ai-agent", "robinhood-chain", "web3", "sdk"],
+  "author": "OUTRIVE",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/outrive/sdk.git"
+  },
+  "homepage": "https://outrive.io",
+  "bugs": {
+    "url": "https://github.com/outrive/sdk/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.0"
+  }
+}
